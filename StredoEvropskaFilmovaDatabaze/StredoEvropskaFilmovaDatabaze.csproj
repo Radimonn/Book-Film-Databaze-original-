@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net9.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ApplicationManifest>app.manifest</ApplicationManifest>
+        <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Avalonia" Version="12.0.2"/>
+        <PackageReference Include="Avalonia.Desktop" Version="12.0.2"/>
+        <PackageReference Include="Avalonia.Themes.Fluent" Version="12.0.2"/>
+        <PackageReference Include="Avalonia.Fonts.Inter" Version="12.0.2"/>
+        <PackageReference Include="AvaloniaUI.DiagnosticsSupport" Version="2.2.1">
+            <IncludeAssets Condition="'$(Configuration)' != 'Debug'">None</IncludeAssets>
+            <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
+        </PackageReference>
+        <PackageReference Include="NAudio" Version="2.2.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Assets\Hudba\" />
+      <Folder Include="Assets\Images\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Assets\Hudba\Elevator Music &amp; Elevator Jazz_ 3 HOURS of Jazzy Elevator Music and Elevator Jazz Music [xNjyG8S4_kI].mp3" />
+      <Content Include="Assets\Hudba\Elevator Music &amp; Elevator Jazz_ 3 HOURS of Jazzy Elevator Music and Elevator Jazz Music [xNjyG8S4_kI].mp3">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Assets\Images\images.jpg" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Assets\Images\bender.png" />
+      <AvaloniaResource Include="Assets\Images\bender.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </AvaloniaResource>
+    </ItemGroup>
+</Project>

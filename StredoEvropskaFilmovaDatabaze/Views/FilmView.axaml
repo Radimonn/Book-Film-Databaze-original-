@@ -1,0 +1,272 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="1920" d:DesignHeight="1080"
+             Width="1920"
+             Height="1080"
+             x:CompileBindings="False"
+             x:Class="StredoEvropskaFilmovaDatabaze.Views.FilmView">
+    
+    <Grid>
+        
+        <StackPanel Background="BurlyWood">
+            <StackPanel Background="AntiqueWhite"
+                        Margin="40"
+                        Height="1000">
+                <StackPanel HorizontalAlignment="Left"
+                            VerticalAlignment="Top">
+                        
+                        <Image x:Name="Obrazek"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Top"
+                               MaxHeight="600"
+                               MaxWidth="600"
+                               Stretch="UniformToFill"/>
+                        
+                        <Image x:Name="ObrazekB"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Top"
+                               MaxHeight="600"
+                               Source="../Assets/Images/bender.png"
+                               MaxWidth="600"
+                               Stretch="UniformToFill"/>
+                
+                        <Button Content="{Binding Prekladac.T[VyberObrazek]}"
+                                FontSize="30"
+                                Padding="20"
+                                Click="VyberObrazek"
+                                Margin="15"
+                                Width="500"
+                                HorizontalContentAlignment="Center"
+                                Background="BurlyWood"
+                                HorizontalAlignment="Center"
+                        />
+                        
+                        <TextBox Watermark="{Binding Prekladac.T[Hodnoceni]}"
+                                 FontSize="30"
+                                 Padding="20"
+                                 Width="300"
+                                 HorizontalContentAlignment="Left"
+                                 BorderBrush="BurlyWood"
+                                 BorderThickness="3"
+                                 Text="{Binding AktualniFilm.hodnoceni}"
+                                 Background="AliceBlue"
+                                 Foreground="Black"
+                                 HorizontalAlignment="Center"
+                        />
+                        
+                        <CheckBox Content="{Binding Prekladac.T[Videl]}"
+                                  HorizontalAlignment="Center"
+                                  FontSize="30"
+                                  IsChecked="{Binding AktualniFilm.videl}"
+                                  Margin="20"
+                        />
+                        
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+        
+        <StackPanel HorizontalAlignment="Right"
+                    VerticalAlignment="Top"
+                    Margin="120"
+                    Background="Bisque"
+                    Height="920">
+            
+            <TextBox MaxWidth="1080"
+                     Width="1080"
+                     Watermark="{Binding Prekladac.T[NazevFilmu]}"
+                     FontSize="40"
+                     Text="{Binding AktualniFilm.nazev}"
+                     BorderBrush="BurlyWood"
+                     BorderThickness="3"
+                     Background="AliceBlue"
+                     Foreground="Black"
+                     />
+            
+            <TextBlock Text="{Binding Prekladac.T[RokyVydani]}"
+                       HorizontalAlignment="Center"
+                       FontSize="40"
+                       Margin="25"/>
+            
+            <DatePicker Background="AliceBlue"
+                        FontSize="40"
+                        HorizontalAlignment="Center"
+                        MaxWidth="800"
+                        Width="800"
+                        BorderBrush="BurlyWood"
+                        BorderThickness="3"
+                        SelectedDate="{Binding AktualniFilm.rok}"
+                        />
+            
+            <TextBlock Text="{Binding Prekladac.T[ZanrFilmu]}"
+                       HorizontalAlignment="Center"
+                       FontSize="40"
+                       Margin="25"/>
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center">
+                
+                <Button Content="Fantasy"
+                        FontSize="30"
+                        Padding="10"
+                        Margin="8"
+                        Background="BurlyWood"
+                        Click="ZmenaZanr"
+                        HorizontalContentAlignment="Center"
+                        Width="180"/>
+                
+                <Button Content="Sci-Fi"
+                        FontSize="30"
+                        Padding="10"
+                        Margin="8"
+                        Background="BurlyWood"
+                        HorizontalContentAlignment="Center"
+                        Click="ZmenaZanr"
+                        Width="180"/>
+                
+                <Button Content="Drama"
+                        FontSize="30"
+                        Padding="10"
+                        Margin="8"
+                        Click="ZmenaZanr"
+                        Background="BurlyWood"
+                        HorizontalContentAlignment="Center"
+                        Width="180"/>
+                
+                <Button Content="Detektivka"
+                        FontSize="30"
+                        Padding="10"
+                        Margin="8"
+                        Background="BurlyWood"
+                        Click="ZmenaZanr"
+                        HorizontalContentAlignment="Center"
+                        Width="180"/>
+                
+                <Button Content="Thriller"
+                        FontSize="30"
+                        Margin="8"
+                        Padding="10"
+                        Background="BurlyWood"
+                        Click="ZmenaZanr"
+                        HorizontalContentAlignment="Center"
+                        Width="180"/>
+                
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center">
+                
+                    <Button Content="Komedie"
+                            FontSize="30"
+                            Padding="10"
+                            Margin="8"
+                            Background="BurlyWood"
+                            Click="ZmenaZanr"
+                            HorizontalContentAlignment="Center"
+                            Width="180"/>
+                
+                    <Button Content="Horror"
+                            FontSize="30"
+                            Padding="10"
+                            Click="ZmenaZanr"
+                            Margin="8"
+                            Background="BurlyWood"
+                            HorizontalContentAlignment="Center"
+                            Width="180"/>
+                
+                    <Button Content="Erotický"
+                            FontSize="30"
+                            Padding="10"
+                            Margin="8"
+                            Click="ZmenaZanr"
+                            Background="BurlyWood"
+                            HorizontalContentAlignment="Center"
+                            Width="180"/>
+                
+                    <Button Content="Dokument"
+                            FontSize="30"
+                            Padding="10"
+                            Margin="8"
+                            Background="BurlyWood"
+                            Click="ZmenaZanr"
+                            HorizontalContentAlignment="Center"
+                            Width="180"/>
+                
+                    <Button Content="Akční"
+                            FontSize="30"
+                            Margin="8"
+                            Padding="10"
+                            Background="BurlyWood"
+                            HorizontalContentAlignment="Center"
+                            Click="ZmenaZanr"
+                            Width="180"/>
+                
+            </StackPanel>
+            
+            <TextBlock FontSize="30"
+                       Text="{Binding AktualniFilm.zanr}"
+                       Padding="10"
+                       x:Name="Zanr"
+                       MaxWidth="900"
+                       Background="AliceBlue"
+                       Margin="20"
+                       />
+            
+            <StackPanel Orientation="Horizontal">
+                    <TextBlock FontSize="30"
+                               Text="{Binding Prekladac.T[DelkaFilmu]}"
+                               Padding="10"
+                               Margin="20"/>
+                    
+                    <TimePicker Background="AliceBlue"
+                                FontSize="30"
+                                HorizontalAlignment="Center"
+                                MaxWidth="600"
+                                Width="600"
+                                SelectedTime="{Binding AktualniFilm.delka}"
+                                BorderBrush="BurlyWood"
+                                BorderThickness="3"/>
+            </StackPanel>
+            
+            <TextBox MaxWidth="1080"
+                     Width="1080"
+                     Watermark="{Binding Prekladac.T[PopisFilmu]}"
+                     FontSize="40"
+                     TextWrapping="Wrap"
+                     Text="{Binding AktualniFilm.popis}"
+                     MaxHeight="247"
+                     Height="247"
+                     BorderBrush="BurlyWood"
+                     BorderThickness="3"
+                     Background="AliceBlue"
+                     Foreground="Black"/>
+            
+            
+        </StackPanel>
+            
+            <StackPanel HorizontalAlignment="Left"
+                        VerticalAlignment="Bottom"
+                        Margin="90"
+                        Orientation="Horizontal">
+                    
+                    <Button Content="{Binding Prekladac.T[TlacitkoZpet]}"
+                            FontSize="35"
+                            Padding="15"
+                            Width="200"
+                            HorizontalContentAlignment="Center"
+                            Background="BurlyWood"
+                            Click="Zpet"
+                    />
+                    
+                    <Button Content="{Binding Prekladac.T[Odstranit]}"
+                            FontSize="35"
+                            Padding="15"
+                            Margin="10"
+                            Width="285"
+                            HorizontalContentAlignment="Center"
+                            Background="BurlyWood"
+                            Click="Odstranit"
+                    />
+            </StackPanel>
+    </Grid>
+</UserControl>

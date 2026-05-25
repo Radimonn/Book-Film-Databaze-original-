@@ -1,0 +1,8 @@
+C:\Users\jojo0\Desktop\Aplikace\StredoEvropskaFilmovaDatabaze.pdb
+C:\Users\jojo0\Desktop\Aplikace\Assets\Hudba\Elevator Music & Elevator Jazz_ 3 HOURS of Jazzy Elevator Music and Elevator Jazz Music [xNjyG8S4_kI].mp3
+C:\Users\jojo0\Desktop\Aplikace\av_libglesv2.dll
+C:\Users\jojo0\Desktop\Aplikace\libHarfBuzzSharp.dll
+C:\Users\jojo0\Desktop\Aplikace\libHarfBuzzSharp.pdb
+C:\Users\jojo0\Desktop\Aplikace\libSkiaSharp.dll
+C:\Users\jojo0\Desktop\Aplikace\libSkiaSharp.pdb
+C:\Users\jojo0\Desktop\Aplikace\StredoEvropskaFilmovaDatabaze.exe

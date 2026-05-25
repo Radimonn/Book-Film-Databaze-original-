@@ -1,0 +1,79 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="1920" d:DesignHeight="1080"
+             Width="1920"
+             Height="1080"
+             x:CompileBindings="False"
+             x:Class="StredoEvropskaFilmovaDatabaze.Views.PridatFilm">
+    
+    <Grid>
+        
+        <StackPanel Background="BurlyWood">
+            
+            <StackPanel Background="AntiqueWhite"
+                        Margin="40"
+                        Height="1000">
+            
+                <StackPanel Margin="390"
+                            Width="1040">
+                    
+                    <TextBox Watermark="{Binding Prekladac.T[NazevFilmu]}"
+                             FontSize="40"
+                             Padding="20"
+                             Width="1000"
+                             HorizontalContentAlignment="Left"
+                             BorderBrush="BurlyWood"
+                             BorderThickness="3"
+                             Background="AliceBlue"
+                             x:Name="Nazev"
+                             Foreground="Black"
+                             HorizontalAlignment="Center"
+                    />
+                    
+                    <StackPanel Orientation="Horizontal"
+                                Margin="20">
+                        
+                        <Button Content="{Binding Prekladac.T[TlacitkoZpet]}"
+                                FontSize="50"
+                                Padding="15"
+                                Width="300"
+                                Background="BurlyWood"
+                                Click="Zpet"
+                                HorizontalAlignment="Left"
+                                HorizontalContentAlignment="Center"
+                                />
+                        
+                        <Button Content="{Binding Prekladac.T[PridatFilm]}"
+                                FontSize="50"
+                                Padding="15"
+                                Width="690"
+                                Margin="10"
+                                Background="BurlyWood"
+                                Click="Pridat"
+                                HorizontalAlignment="Right"
+                                HorizontalContentAlignment="Center"
+                        />
+                        
+                    </StackPanel>
+                    
+                    <TextBlock Text="{Binding Prekladac.T[NazevVyhruzka]}"
+                               HorizontalAlignment="Center"
+                               Background="AliceBlue"
+                               Foreground="IndianRed"
+                               Padding="20"
+                               x:Name="chyba"
+                               FontSize="50"
+                               Margin="25"/>
+                    
+                </StackPanel>
+            
+            </StackPanel>
+            
+        </StackPanel>
+        
+    </Grid>
+    
+    
+</UserControl>

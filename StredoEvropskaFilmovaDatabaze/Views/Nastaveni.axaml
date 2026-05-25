@@ -1,0 +1,240 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="1920" d:DesignHeight="1080"
+             Width="1920"
+             Height="1080"
+             x:CompileBindings="False"
+             x:Class="StredoEvropskaFilmovaDatabaze.Views.Nastaveni">
+   
+    <Grid>
+        
+        <StackPanel Background="BurlyWood">
+            
+            <StackPanel Margin="40"
+                        Background="AntiqueWhite"
+                        Height="1000">
+                
+                <StackPanel HorizontalAlignment="Center"
+                            Margin="0"
+                            Background="Bisque"
+                            Height="1000"
+                            Width="1200">
+                    
+                    <TextBlock Text="{Binding Prekladac.T[HlasitostHudba]}"
+                               FontSize="50"
+                               Margin="20"
+                               HorizontalAlignment="Center"
+                               />
+                    <Slider Width="700"
+                            Minimum="0"
+                            Maximum="100"
+                            x:Name="SliderHudba"
+                            ValueChanged="ZmenaHlasitosti"
+                            />
+                    
+                    <StackPanel HorizontalAlignment="Center"
+                                Margin="2">
+                    
+                        <TextBlock Text="{Binding Prekladac.T[VyberJazyku]}"
+                                   HorizontalAlignment="Center"
+                                   FontSize="48"
+                                   Margin="30"/>
+                        
+                        <StackPanel Orientation="Horizontal"
+                                    VerticalAlignment="Center">
+                            
+                            <Button Content="Čeština"
+                                    FontSize="40"
+                                    Padding="13"
+                                    Width="270"
+                                    HorizontalContentAlignment="Center"
+                                    Margin="10"
+                                    Click="ZmenaJazyka"
+                                    Background="BurlyWood"
+                                    />
+                            
+                            <Button Content="Slovenština"
+                                    FontSize="40"
+                                    Padding="13"
+                                    Width="270"
+                                    HorizontalContentAlignment="Center"
+                                    Margin="2"
+                                    Click="ZmenaJazyka"
+                                    Background="BurlyWood"
+                            />
+                            <Button Content="Rumunština"
+                                    FontSize="40"
+                                    Padding="13"
+                                    Width="270"
+                                    HorizontalContentAlignment="Center"
+                                    Margin="10"
+                                    Click="ZmenaJazyka"
+                                    Background="BurlyWood"
+                            />
+                            <Button Content="Řečtina"
+                                    FontSize="40"
+                                    Width="270"
+                                    HorizontalContentAlignment="Center"
+                                    Padding="13"
+                                    Click="ZmenaJazyka"
+                                    Background="BurlyWood"
+                            />
+                            
+                            
+                        </StackPanel>
+                        
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="0"
+                                    HorizontalAlignment="Center">
+                            
+                                <Button Content="Polština"
+                                        FontSize="40"
+                                        Padding="13"
+                                        Width="270"
+                                        HorizontalContentAlignment="Center"
+                                        Margin="10"
+                                        Click="ZmenaJazyka"
+                                        Background="BurlyWood"
+                                />
+                            
+                                <Button Content="Němčina"
+                                        FontSize="40"
+                                        Padding="13"
+                                        Width="270"
+                                        HorizontalContentAlignment="Center"
+                                        Margin="2"
+                                        Click="ZmenaJazyka"
+                                        Background="BurlyWood"
+                                />
+                                <Button Content="Maďarština"
+                                        FontSize="40"
+                                        Padding="13"
+                                        Width="270"
+                                        HorizontalContentAlignment="Center"
+                                        Margin="10"
+                                        Click="ZmenaJazyka"
+                                        Background="BurlyWood"
+                                />
+                                <Button Content="Chorvatština"
+                                        FontSize="40"
+                                        Width="270"
+                                        HorizontalContentAlignment="Center"
+                                        Padding="13"
+                                        Click="ZmenaJazyka"
+                                        Background="BurlyWood"
+                                />
+                            
+                            
+                        </StackPanel>
+                        
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="0"
+                                    HorizontalAlignment="Center">
+                            
+                                <Button Content="Ukrajinština"
+                                        FontSize="40"
+                                        Padding="13"
+                                        Width="270"
+                                        HorizontalContentAlignment="Center"
+                                        Margin="10"
+                                        Click="ZmenaJazyka"
+                                        Background="BurlyWood"
+                                />
+                            
+                                <Button Content="Albánština"
+                                        FontSize="40"
+                                        Padding="13"
+                                        Width="270"
+                                        HorizontalContentAlignment="Center"
+                                        Margin="2"
+                                        Click="ZmenaJazyka"
+                                        Background="BurlyWood"
+                                />
+                                <Button Content="Bulharština"
+                                        FontSize="40"
+                                        Padding="13"
+                                        Width="270"
+                                        HorizontalContentAlignment="Center"
+                                        Margin="10"
+                                        Click="ZmenaJazyka"
+                                        Background="BurlyWood"
+                                />
+                                <Button Content="Srbština"
+                                        FontSize="40"
+                                        Width="270"
+                                        HorizontalContentAlignment="Center"
+                                        Padding="13"
+                                        Click="ZmenaJazyka"
+                                        Background="BurlyWood"
+                                />
+                            
+                        </StackPanel>
+                        
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="0"
+                                    HorizontalAlignment="Center">
+                            
+                                <Button Content="Litevština"
+                                        FontSize="40"
+                                        Padding="13"
+                                        Width="270"
+                                        HorizontalContentAlignment="Center"
+                                        Margin="10"
+                                        Click="ZmenaJazyka"
+                                        Background="BurlyWood"
+                                />
+                            
+                                <Button Content="Italština"
+                                        FontSize="40"
+                                        Padding="13"
+                                        Width="270"
+                                        HorizontalContentAlignment="Center"
+                                        Margin="2"
+                                        Click="ZmenaJazyka"
+                                        Background="BurlyWood"
+                                />
+                                <Button Content="Běloruština"
+                                        FontSize="40"
+                                        Padding="13"
+                                        Width="270"
+                                        HorizontalContentAlignment="Center"
+                                        Margin="10"
+                                        Click="ZmenaJazyka"
+                                        Background="BurlyWood"
+                                />
+                                <Button Content="Bosenština"
+                                        FontSize="40"
+                                        Width="270"
+                                        HorizontalContentAlignment="Center"
+                                        Padding="13"
+                                        Click="ZmenaJazyka"
+                                        Background="BurlyWood"
+                                />
+                            
+                            
+                        </StackPanel>
+                        
+                    </StackPanel>
+                    
+                </StackPanel>
+                
+            </StackPanel>
+            
+        </StackPanel>
+        
+        <Button FontSize="50"
+                Content="{Binding Prekladac.T[TlacitkoZpet]}"
+                Margin="80"
+                Padding="20"
+                VerticalAlignment="Bottom"
+                Width="250"
+                HorizontalContentAlignment="Center"
+                Background="BurlyWood"
+                Click="Zpet"
+                />
+        
+    </Grid>
+    
+</UserControl>

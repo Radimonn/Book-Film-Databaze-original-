@@ -1,0 +1,98 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="1920" d:DesignHeight="1080"
+             Width="1920"
+             Height="1080"
+             x:CompileBindings="False"
+             x:Class="StredoEvropskaFilmovaDatabaze.Views.HlavniMenu">
+    
+    <Grid>
+        
+        <StackPanel Background="BurlyWood">
+            
+            <StackPanel Margin="40"
+                        Background="AntiqueWhite"
+                        Height="1000">
+            
+                <TextBlock Text="{Binding Prekladac.T[NadpisHlavniMenu]}"
+                           FontSize="60"
+                           TextWrapping="Wrap"
+                           HorizontalAlignment="Center"
+                           MaxWidth="1150"
+                           Margin="30"/>
+            
+                <TextBox Watermark="{Binding Prekladac.T[VyhledatFilm]}"
+                         BorderThickness="3"
+                         Width="900"
+                         TextChanged="Vyhledat"
+                         Margin="15"
+                         FontSize="40"/>
+                
+                <ScrollViewer Margin="40"
+                              MaxHeight="600">
+                    <ItemsControl ItemsSource="{Binding FilmyDatabaze.FiltrovaneFilmy}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Button Content="{Binding nazev}"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Top"
+                                        Margin="10"
+                                        FontSize="35"
+                                        Width="850"
+                                        Padding="15"
+                                        HorizontalContentAlignment="Left"
+                                        Background="OldLace"
+                                        BorderThickness="3"
+                                        BorderBrush="BurlyWood"
+                                        Click="FilmView"
+                                        />
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </ScrollViewer>
+                
+            </StackPanel>
+            
+        </StackPanel>
+        
+        <StackPanel HorizontalAlignment="Left"
+                    VerticalAlignment="Bottom"
+                    Margin="60">
+            
+            <Button FontSize="50"
+                    Content="{Binding Prekladac.T[TlacitkoNastaveni]}"
+                    Margin="10"
+                    Padding="20"
+                    Width="400"
+                    Background="BurlyWood"
+                    Click="Nastaveni"/>
+            
+            <Button FontSize="50"
+                    Content="{Binding Prekladac.T[TlacitkoKonec]}"
+                    Width="400"
+                    Padding="20"
+                    Margin="10"
+                    Background="BurlyWood"
+                    Click="Konec"/>
+            
+        </StackPanel>
+        
+        <StackPanel HorizontalAlignment="Right"
+                    VerticalAlignment="Bottom"
+                    Margin="60">
+            
+            <Button FontSize="50"
+                    Content="{Binding Prekladac.T[PridatFilm]}"
+                    Width="400"
+                    HorizontalContentAlignment="Center"
+                    Padding="20"
+                    Margin="10"
+                    Background="BurlyWood"
+                    Click="PridatFilm"/>
+            
+            
+        </StackPanel>
+    </Grid>
+</UserControl>
