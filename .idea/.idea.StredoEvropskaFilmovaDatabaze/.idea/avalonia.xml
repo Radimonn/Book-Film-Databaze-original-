@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="StredoEvropskaFilmovaDatabaze/MainWindow.axaml" value="StredoEvropskaFilmovaDatabaze/StredoEvropskaFilmovaDatabaze.csproj" />
+        <entry key="StredoEvropskaFilmovaDatabaze/Views/FilmView.axaml" value="StredoEvropskaFilmovaDatabaze/StredoEvropskaFilmovaDatabaze.csproj" />
+        <entry key="StredoEvropskaFilmovaDatabaze/Views/HlavniMenu.axaml" value="StredoEvropskaFilmovaDatabaze/StredoEvropskaFilmovaDatabaze.csproj" />
+        <entry key="StredoEvropskaFilmovaDatabaze/Views/Nastaveni.axaml" value="StredoEvropskaFilmovaDatabaze/StredoEvropskaFilmovaDatabaze.csproj" />
+        <entry key="StredoEvropskaFilmovaDatabaze/Views/PridatFILM.axaml" value="StredoEvropskaFilmovaDatabaze/StredoEvropskaFilmovaDatabaze.csproj" />
+        <entry key="StredoEvropskaFilmovaDatabaze/Views/PridatFilm.axaml" value="StredoEvropskaFilmovaDatabaze/StredoEvropskaFilmovaDatabaze.csproj" />
+      </map>
+    </option>
+  </component>
+</project>
