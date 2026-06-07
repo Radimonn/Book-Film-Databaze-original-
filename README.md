@@ -1,1 +1,1 @@
-Dali jsem sem všechny co jsme viděli: "Veni Vidi Vici"
+Dali jsme sem všechny co jsme viděli: "Veni Vidi Vici"
